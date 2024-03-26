@@ -147,10 +147,25 @@ Let x be an integer variable defined and initialised to the value 10.
 int x = 10;
 ```
 
-An integer take 32 bytes (256 bits) of memory. If we assume the first bit is stored in memory address 0X100 then the last bit will be stored in the 0X355, ie, 0X100 + (256 -1). A integer pointer can store the address of an integer variable.
+An integer take 4 bytes of memory. If we assume the first byte is stored in memory address 0X00 (0th bit) then the last byte will be stored in memory address 0X03 (23rd bit). A integer pointer can store the address of an integer variable.
 
 ```
 int *ptr = &x;
 ```
 
-As the address of the variable x starts with address 0X100, the pointer variable ptr will have the value 0X100. 
+As the address of the variable **x** starts with address 0X00, the pointer variable **ptr** will have the value 0X00. 
+
+## Dynamic Memory
+
+C has five distinct areas of memory: 
+
+Text Segment: Once the program is compiled, it produces a binary file. This file is used to execute our program by loading it into RAM. Within this binary file are instructions, which are stored in the text segment of the memory. The text segment is allocated read-only permission to prevent inadvertent modifications to the program. 
+
+Initialized data segment: The initialized data segment is the memory segment holds the values of external, global, static, and constant variables initialized at their declaration within the program. Given that variable values can alter during program execution, this memory segment is granted read-write permission. 
+
+Uninitialized data segment: The uninitialized data segment, often referred to as BSS (Block Started by Symbol), is allocated memory upon program loading. All data within the BSS segment is initialized to arithmetic 0 and pointers to null by the kernel prior to program execution. This segment includes static and global variables initialized with arithmetic 0. Given that the values of variables stored in BSS can be altered, this data segment is granted read-write permissions.
+
+Stack: This segment is used forstoring local variables. When a local variable is defined, memory is allocated for it, and this memory is released promptly as the variable goes out of scope. The stack operates in a last-in-first-out (LIFO) queue. As variables are defined, they are "pushed onto the stack," increasing the stack's size. At the conclusion of a block, when multiple variables go out of scope simultaneously, they are destroyed, or "popped off the stack," in the reverse order of their allocation. Stack memory allocation is entirely managed by the compiler.
+
+Heap:  The heap memory region is designated for dynamically allocated storage and is handled explicitly by the programmer, rather than the compiler. Requests for memory allocation and deallocation are managed through a set of standard library functions, granting the programmer full control over the lifespan of allocated memory blocks. While heap-allocated memory offers flexibility and control, it also entails added responsibility on the part of the programmer. Unlike stack memory, the compiler does not verify the correct management of memory, making dynamic memory errors a common source of subtle runtime bugs.
+

@@ -134,3 +134,23 @@ In **switch** statement the block whose value gets matched to the value passed t
 In Python the loops can be used as an iterator throgh different data staructures, while in C this is not possible. In C, loops are used as a control structure to manage statements that are repeated. This also means that in C the exit and entry to the loop body are based on an expression evaluation.
 
 In addition, C also offeres a **do-while** loop. While the **for** loop and **while** loop are entry controlled - the condition to enter the loop body is checked in the beginning of the loop execution. The do-wile loops is exit controlled - the condition to enter the loop body is checked at the end of loop execution. Which means that the loop is executed at least once. 
+
+## Pointers
+
+A pointer is a variable whose value is a memory address. 
+
+![memory](fig/pointers.png)
+
+Let x be an integer variable defined and initialised to the value 10. 
+
+```
+int x = 10;
+```
+
+An integer take 32 bytes (256 bits) of memory. If we assume the first bit is stored in memory address 0X100 then the last bit will be stored in the 0X355, ie, 0X100 + (256 -1). A integer pointer can store the address of an integer variable.
+
+```
+int *ptr = &x;
+```
+
+As the address of the variable x starts with address 0X100, the pointer variable ptr will have the value 0X100. 

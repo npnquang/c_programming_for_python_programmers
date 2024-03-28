@@ -27,9 +27,6 @@ void main()
 
     printf("Wheels %d, Gears %d \n", objVehicle->wheels, objVehicle->gears);
 
-    
-
-
     free(objCars);
 }
 

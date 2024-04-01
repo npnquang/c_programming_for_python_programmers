@@ -40,7 +40,7 @@ C is a types language. Every variable in C is assigned a distinct type that dict
 | long int      |       8           |
 | float         |       4           |
 | double        |       8           |
-| lonh double   |       16          |
+| long double   |       16          |
 
 All variables must be declared before they are used. They must be declared at the top of a block, a
 section of code enclosed in brackets { and }, before any statements.
@@ -48,7 +48,7 @@ section of code enclosed in brackets { and }, before any statements.
 ### Signed and Unsigned variables
 
 A signed type can represent negative values (default option). The most-significant-bit (MSB) of the signed number is its sign-bit, and the value is typically encoded in 2’s-complement binary. An unsigned type is always non-negative, and the MSB is part of the numerical value—doubling the maximum
-representable value compared to an equivalent signed type. 
+representable value compared to an equivalent signed type.
 
 For example, a 16-bit signed short can represent the numbers −32768 to 32767 (−2 <sup>15</sup> to 2<sup>15</sup> − 1, one bit is used to denote the sign), while a 16-bit unsigned short can represent the numbers 0 to 65535 (0 to 2<sup>16</sup>−1)
 
@@ -75,7 +75,7 @@ if (condition) {
 }
 ```
 
-The main differnce between an if statement in Python and C is that In C the condition should be enclosed in an opening  and closing paranethis and the body should be enclosed in a opening and closing curly braces.
+The main difference between an if statement in Python and C is that In C the condition should be enclosed in an opening  and closing parenthesis and the body should be enclosed in a opening and closing curly braces.
 
 ### if-else Ladder
 
@@ -100,7 +100,7 @@ else {
 }
 ```
 
-The applies to if-else ladder with the additionbal caveat that **elif** is replaced by **else if**. 
+The applies to if-else ladder with the additional caveat that **elif** is replaced by **else if**. 
 
 ### Conditional expression
 
@@ -129,13 +129,13 @@ switch(value) {
 }
 ```
 
-In **switch** statement the block whose value gets matched to the value passed to the switch command gets evaluated. The break statement after each case block is important or else all the staements after the qualifying case will also get evaluated. 
+In **switch** statement the block whose value gets matched to the value passed to the switch command gets evaluated. The break statement after each case block is important or else all the statements after the qualifying case will also get evaluated. 
 
 ## Loops
 
-In Python the loops can be used as an iterator throgh different data staructures, while in C this is not possible. In C, loops are used as a control structure to manage statements that are repeated. This also means that in C the exit and entry to the loop body are based on an expression evaluation.
+In Python the loops can be used as an iterator through different data structures, while in C this is not possible. In C, loops are used as a control structure to manage statements that are repeated. This also means that in C the exit and entry to the loop body are based on an expression evaluation.
 
-In addition, C also offeres a **do-while** loop. While the **for** loop and **while** loop are entry controlled - the condition to enter the loop body is checked in the beginning of the loop execution. The do-wile loops is exit controlled - the condition to enter the loop body is checked at the end of loop execution. Which means that the loop is executed at least once. 
+In addition, C also offers a **do-while** loop. While the **for** loop and **while** loop are entry controlled - the condition to enter the loop body is checked in the beginning of the loop execution. The do-wile loops is exit controlled - the condition to enter the loop body is checked at the end of loop execution. Which means that the loop is executed at least once. 
 
 ![loop](fig/forloop.png)
 
@@ -149,7 +149,7 @@ A pointer is a variable whose value is a memory address.
 
 ![memory](fig/pointers.png)
 
-Let x be an integer variable defined and initialised to the value 10. 
+Let x be an integer variable defined and initialized to the value 10. 
 
 ```
 int x = 10;
@@ -163,7 +163,7 @@ int *ptr = &x;
 
 As the address of the variable **x** starts with address 0X00, the pointer variable **ptr** will have the value 0X00. 
 
-## Pointer Arithmatics
+## Pointer Arithmetics
 
 ![memory](fig/pointers_arith_int.png)
 
@@ -180,9 +180,9 @@ Initialized data segment: The initialized data segment is the memory segment hol
 
 Uninitialized data segment: The uninitialized data segment, often referred to as BSS (Block Started by Symbol), is allocated memory upon program loading. All data within the BSS segment is initialized to arithmetic 0 and pointers to null by the kernel prior to program execution. This segment includes static and global variables initialized with arithmetic 0. Given that the values of variables stored in BSS can be altered, this data segment is granted read-write permissions.
 
-Stack: This segment is used forstoring local variables. When a local variable is defined, memory is allocated for it, and this memory is released promptly as the variable goes out of scope. The stack operates in a last-in-first-out (LIFO) queue. As variables are defined, they are "pushed onto the stack," increasing the stack's size. At the conclusion of a block, when multiple variables go out of scope simultaneously, they are destroyed, or "popped off the stack," in the reverse order of their allocation. Stack memory allocation is entirely managed by the compiler.
+Stack: This segment is used for storing local variables. When a local variable is defined, memory is allocated for it, and this memory is released promptly as the variable goes out of scope. The stack operates in a last-in-first-out (LIFO) queue. As variables are defined, they are "pushed onto the stack," increasing the stack's size. At the conclusion of a block, when multiple variables go out of scope simultaneously, they are destroyed, or "popped off the stack," in the reverse order of their allocation. Stack memory allocation is entirely managed by the compiler.
 
-Heap:  The heap memory region is designated for dynamically allocated storage and is handled explicitly by the programmer, rather than the compiler. Requests for memory allocation and deallocation are managed through a set of standard library functions, granting the programmer full control over the lifespan of allocated memory blocks. While heap-allocated memory offers flexibility and control, it also entails added responsibility on the part of the programmer. Unlike stack memory, the compiler does not verify the correct management of memory, making dynamic memory errors a common source of subtle runtime bugs.
+Heap:  The heap memory region is designated for dynamically allocated storage and is handled explicitly by the programmer, rather than the compiler. Requests for memory allocation and de-allocation are managed through a set of standard library functions, granting the programmer full control over the lifespan of allocated memory blocks. While heap-allocated memory offers flexibility and control, it also entails added responsibility on the part of the programmer. Unlike stack memory, the compiler does not verify the correct management of memory, making dynamic memory errors a common source of subtle runtime bugs.
 
 ![memory](fig/malloc.png)
 

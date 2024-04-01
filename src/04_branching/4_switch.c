@@ -6,11 +6,11 @@ void main()
     int opt;
 
     printf("Enter a case option: \n");
-    scanf("%d", &opt);
+    scanf("%d", &opt); /** read an integer value from the user */
 
     switch(opt) {
         case 1: printf("Case 1 \n"); 
-                break;
+                break; /** Break statement after each case body is required */
 
         case 2: printf("Case 2 \n"); 
                 break;

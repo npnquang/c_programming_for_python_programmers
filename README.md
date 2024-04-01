@@ -188,3 +188,7 @@ Heap:  The heap memory region is designated for dynamically allocated storage an
 ![memory](fig/array_multi.png)
 
 ![memory](fig/dynamic_mem_arr.png)
+
+## Functions
+
+![functions](fig/functions.png)

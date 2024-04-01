@@ -206,3 +206,10 @@ Heap:  The heap memory region is designated for dynamically allocated storage an
 ## Structure
 
 ![structures](fig/structures.png)
+
+## Stages of Compiling
+
+
+
+![compiler](fig/compiler.png)
+

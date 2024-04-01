@@ -135,6 +135,12 @@ In Python the loops can be used as an iterator throgh different data staructures
 
 In addition, C also offeres a **do-while** loop. While the **for** loop and **while** loop are entry controlled - the condition to enter the loop body is checked in the beginning of the loop execution. The do-wile loops is exit controlled - the condition to enter the loop body is checked at the end of loop execution. Which means that the loop is executed at least once. 
 
+![loop](fig/forloop.png)
+
+![loop](fig/whileloop.png)
+
+![loop](fig/dowhileloop.png)
+
 ## Pointers
 
 A pointer is a variable whose value is a memory address. 

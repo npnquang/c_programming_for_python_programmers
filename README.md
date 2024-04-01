@@ -8,6 +8,8 @@ This training will cover:
 5. Pointers
 6. Arrays and Strings
 7. Dynamic Memory
+8. Structures
+9. GDB
 ***
 
 ## Hello World
@@ -181,6 +183,8 @@ Uninitialized data segment: The uninitialized data segment, often referred to as
 Stack: This segment is used forstoring local variables. When a local variable is defined, memory is allocated for it, and this memory is released promptly as the variable goes out of scope. The stack operates in a last-in-first-out (LIFO) queue. As variables are defined, they are "pushed onto the stack," increasing the stack's size. At the conclusion of a block, when multiple variables go out of scope simultaneously, they are destroyed, or "popped off the stack," in the reverse order of their allocation. Stack memory allocation is entirely managed by the compiler.
 
 Heap:  The heap memory region is designated for dynamically allocated storage and is handled explicitly by the programmer, rather than the compiler. Requests for memory allocation and deallocation are managed through a set of standard library functions, granting the programmer full control over the lifespan of allocated memory blocks. While heap-allocated memory offers flexibility and control, it also entails added responsibility on the part of the programmer. Unlike stack memory, the compiler does not verify the correct management of memory, making dynamic memory errors a common source of subtle runtime bugs.
+
+![memory](fig/malloc.png)
 
 
 ![memory](fig/dynamic_mem.png)

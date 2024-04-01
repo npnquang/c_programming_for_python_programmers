@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * Structure with two members of type: 
+ * integer
+ * float
+*/
+
 typedef struct student
 {
     int     age;
@@ -11,8 +17,12 @@ typedef struct student
 void main()
 {
     Student *obj;
+
+    /** allocate an array of struct object in dynamic memory*/
     obj = (Student*) malloc(2 * sizeof(Student));
 
+    /** Set the value of the members of the struct object */
+    
     obj[0].age = 20;
     obj[0].gpa = 7.2;
     obj[0].marks[0] = 70;

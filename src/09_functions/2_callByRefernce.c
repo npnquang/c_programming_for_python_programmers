@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int incValue(int *a);
+/** Function declaration */
+void incValue(int *a);
 
 void main()
 {
@@ -8,13 +9,15 @@ void main()
 
     printf("value before increment    : %d\n", a);
 
+    /** Function call */
     incValue(&a);
 
     printf("value after increment     : %d\n", a);
 
 }
 
-int incValue(int *a)
+/** Function definition */
+void incValue(int *a)
 {
     *a = *a + 1;
 

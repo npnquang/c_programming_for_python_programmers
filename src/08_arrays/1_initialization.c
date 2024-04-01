@@ -2,6 +2,11 @@
 
 void main()
 {
+    /**
+     * Declare an integer array of size 10.
+     * The array indexing starts from 0.
+     * In this case 0 to 9.
+    */
     int a[10];
 
     printf(" 1 ----> ");
@@ -10,6 +15,7 @@ void main()
     }
     printf("\n ");
 
+    /** Initialize the array */
     int b[10] = {0, 1, 2, 3, 4, 5, 6, 8, 8, 9};
 
     printf("2 ----> ");
@@ -19,6 +25,7 @@ void main()
     printf("\n ");
     
     int c[10];
+    /** Initialize the array using for loop */
     for(int i = 0; i < 10; i++) {
         c[i] = 0;
     }

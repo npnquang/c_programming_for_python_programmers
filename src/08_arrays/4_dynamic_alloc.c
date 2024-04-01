@@ -3,8 +3,10 @@
 
 void main()
 {
+    /** initialise a pointer to NULL */
     int *ptr = NULL;
 
+    /** Allocate chunk a memory that can hold 10 integers */
     ptr = (int*) malloc(10 * sizeof(int)); 
 
     /** a[4] is equal to *(a + 4) */

@@ -155,6 +155,13 @@ int *ptr = &x;
 
 As the address of the variable **x** starts with address 0X00, the pointer variable **ptr** will have the value 0X00. 
 
+## Pointer Arithmatics
+
+![memory](fig/pointers_arith_int.png)
+
+![memory](fig/pointers_arith_char.png)
+
+
 ## Dynamic Memory
 
 C has five distinct areas of memory: 
@@ -169,3 +176,5 @@ Stack: This segment is used forstoring local variables. When a local variable is
 
 Heap:  The heap memory region is designated for dynamically allocated storage and is handled explicitly by the programmer, rather than the compiler. Requests for memory allocation and deallocation are managed through a set of standard library functions, granting the programmer full control over the lifespan of allocated memory blocks. While heap-allocated memory offers flexibility and control, it also entails added responsibility on the part of the programmer. Unlike stack memory, the compiler does not verify the correct management of memory, making dynamic memory errors a common source of subtle runtime bugs.
 
+
+![memory](fig/dynamic_mem.png)

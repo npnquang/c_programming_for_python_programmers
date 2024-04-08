@@ -28,6 +28,22 @@ program returns to the calling function. In the case of **main()**, the program 
 
 C is a free-form language, the program is not affected by whitespace in most cases. A statement is terminated by a semicolon and not a newline. 
 
+## Compiling and Running a Program in C
+
+Compiling:
+
+```
+gcc program.c -o program
+```
+
+Running:
+
+```
+./program
+```
+
+
+
 ## Variables and Types
 
 C is a types language. Every variable in C is assigned a distinct type that dictates the range of values it can hold, the manner in which its data is stored in memory, and the permissible operations that can be performed on it. 

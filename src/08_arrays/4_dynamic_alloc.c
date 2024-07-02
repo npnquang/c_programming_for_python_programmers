@@ -12,7 +12,8 @@ void main()
     /** a[4] is equal to *(a + 4) */
 
     for(int i = 0; i < 10; i++) {
-         *(ptr + i) = i;
+        *(ptr + i) = i;
+        // we can use the above, or ptr[i] = i
     }
 
     printf("\n ");

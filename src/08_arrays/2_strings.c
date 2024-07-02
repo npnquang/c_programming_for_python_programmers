@@ -45,7 +45,7 @@ void main()
      * 
      * TODO: remove the comments and see you the program works
     */
-    //*(str2 + 4) = 'X';
-    //printf(" 6 ----> %s \n", str2);
+    // *(str2 + 4) = 'X';
+    // printf(" 6 ----> %s \n", str2);
     
 }
